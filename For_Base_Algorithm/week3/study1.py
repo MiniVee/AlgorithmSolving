@@ -6,7 +6,6 @@ def solution(n, x, y):
         return "0"
     else:
         ans1 = "0"
-
         for j in range(n-1):
             ans2 = ans1[:]
             for i in range(len(ans2)):
@@ -15,7 +14,8 @@ def solution(n, x, y):
                 else:
                     ans2 = ans2[:i] + "0" + ans2[i + 1:]
             ans1 = ans1 + ans2
-    print(ans1)
-    return ""
+        ans3 = ans1[x-1:y]
+        # print(ans3)
+    return ans3
 
-print(solution(3,2,3))
+# print(solution(4,3,7))
