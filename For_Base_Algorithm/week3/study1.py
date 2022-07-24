@@ -18,4 +18,4 @@ def solution(n, x, y):
         # print(ans3)
     return ans3
 
-# print(solution(4,3,7))
+print(solution(4,3,7))
