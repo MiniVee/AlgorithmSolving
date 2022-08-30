@@ -33,7 +33,7 @@ def solution(x, y):
 # 단지 갯수만 구하면 끝
 # for i in range(N):
 #     for j in range(N):
-#진행중
+#
 
 solution(0, 0)
 
