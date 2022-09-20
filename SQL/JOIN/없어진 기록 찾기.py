@@ -1,0 +1,8 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/59042
+
+# SELECT OUTS.ANIMAL_ID, OUTS.NAME
+# FROM ANIMAL_OUTS as OUTS
+# LEFT OUTER JOIN ANIMAL_INS as INS
+# ON OUTS.ANIMAL_ID = INS.ANIMAL_ID
+# WHERE INS.ANIMAL_ID IS NULL
+# order by OUTS.ANIMAL_ID;
