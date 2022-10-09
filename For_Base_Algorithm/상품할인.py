@@ -8,6 +8,9 @@ def solution(prices, coupons):
             if i > j:
                 coupons[j] = 999999
                 continue
+            if coupons[j] < 0:
+                coupons[j] = 999999
+                continue
             if prices[i] >= coupons[j] and i <= j:
                 sale = prices[i] - coupons[j]
                 answer.append(sale)
@@ -23,7 +26,7 @@ print(solution([8, 3, 5, 9, 2],
                [4, 2, 4, 8, 1]))
 
 print(solution([8, 3, 5, 9, 2],
-               [4, 4, 2, 4, 6]))
+               [4, -4, 2, 4, 6]))
 
 print(solution([4, 2, 5, 9, 2],
                [5, 6, 1]))
