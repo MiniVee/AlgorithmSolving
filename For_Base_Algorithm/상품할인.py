@@ -1,4 +1,4 @@
-
+#상품할인 문제
 def solution(prices, coupons):
     answer = []
     for i in range(len(prices)):
@@ -6,6 +6,9 @@ def solution(prices, coupons):
             if coupons[j] == 0:
                 continue
             if i > j:
+                coupons[j] = 999999
+                continue
+            if coupons[j] < 0:
                 coupons[j] = 999999
                 continue
             if prices[i] >= coupons[j] and i <= j:
@@ -23,7 +26,7 @@ print(solution([8, 3, 5, 9, 2],
                [4, 2, 4, 8, 1]))
 
 print(solution([8, 3, 5, 9, 2],
-               [4, 4, 2, 4, 6]))
+               [4, -4, 2, 4, 6]))
 
 print(solution([4, 2, 5, 9, 2],
                [5, 6, 1]))
