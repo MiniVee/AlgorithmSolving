@@ -1,4 +1,4 @@
-
+#상품할인 문제
 def solution(prices, coupons):
     answer = []
     for i in range(len(prices)):
