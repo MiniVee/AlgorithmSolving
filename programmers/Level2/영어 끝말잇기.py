@@ -17,14 +17,8 @@ def solution(n, words):
             if exist.count(exist[i]) == 2:
                 print(exist[i])
 
-
-
-
-
     #print(exist)
-
-
-
+    
     return answer
 
 #print(solution(3, ["tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"]))
