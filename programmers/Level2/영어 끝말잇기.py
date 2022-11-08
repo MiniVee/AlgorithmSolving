@@ -1,32 +1,22 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/12981
 
 def solution(n, words):
-    answer = []
+    answer = [0, 0]
     exist = []
-    cnt = 0
-    for i in range(len(words)):
-        if len(exist) == 0:
-            exist.append(words[0])
-            continue
-        else:
+    exist.append(words[0])
+    last_alpha = words[0][-1]
+    for i in range(1, len(words)):
+        if words[i] not in exist and words[i][0] == last_alpha:
             exist.append(words[i])
-            if exist[i-1][-1] != exist[i][0]:
-                print(exist[i])
-                human = n//i
-                whatNum = n%i
-            if exist.count(exist[i]) == 2:
-                print(exist[i])
-
-
-
-
-
-    #print(exist)
-
+            last_alpha = words[i][-1]
+        else:
+            answer[0] = i%n + 1
+            answer[1] = i//n + 1
+            break
 
 
     return answer
 
 #print(solution(3, ["tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"]))
-print(solution(5, ["hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"]))
-#print(solution(2, ["hello", "one", "even", "never", "now", "world", "draw"]))
+#print(solution(5, ["hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"]))
+print(solution(2, ["hello", "one", "even", "never", "now", "world", "draw"]))
